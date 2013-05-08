@@ -2,6 +2,7 @@ package com.example.helloworld.service;
 
 import com.example.helloworld.configuration.TaskConfiguration;
 import com.example.helloworld.resources.TaskAddResource;
+import com.example.helloworld.resources.TaskDeleteResource;
 import com.example.helloworld.resources.TaskListResource;
 import com.yammer.dropwizard.Service;
 import com.yammer.dropwizard.config.Bootstrap;
@@ -22,10 +23,9 @@ public class TaskService extends Service<TaskConfiguration> {
 
     @Override
     public void run(TaskConfiguration configuration, Environment environment) throws Exception {
-        final String dbNameService = configuration.getDbName();
-
         environment.addResource(new TaskListResource());
         environment.addResource(new TaskAddResource());
+        environment.addResource(new TaskDeleteResource());
     }
 
     public static void main(String[] args) throws Exception {

@@ -22,10 +22,8 @@ import java.util.NoSuchElementException;
 public class TaskAddResource {
 
     private DaoHelper daoHelper;
-    private String dbConnect;
 
     public TaskAddResource() throws SQLException {
-//        this.dbConnect = dbConnect;
         daoHelper = new DaoHelper();
     }
 
@@ -34,7 +32,7 @@ public class TaskAddResource {
     public TaskBean newTask(@PathParam("task") String title,
                             @PathParam("priority") int priority) throws SQLException {
         Task task = new Task(title, priority);
-
+        daoHelper.addTask(task);
         return new TaskBean(task.getId(), task.getTask(), task.getPriority());
     }
 

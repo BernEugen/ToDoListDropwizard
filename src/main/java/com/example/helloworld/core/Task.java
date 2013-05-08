@@ -51,9 +51,4 @@ public class Task {
         this.priority = priority;
     }
 
-    @Override
-    public String toString() {
-        return "Message [messageId=" + id + ", messageTitle="
-                + newTask + ", messageText=" + priority + "]";
-    }
 }

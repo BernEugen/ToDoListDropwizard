@@ -23,7 +23,6 @@ public class TaskListResource {
 
     private DaoHelper daoHelper;
 
-
     public TaskListResource() throws SQLException {
         daoHelper = new DaoHelper();
     }
@@ -31,8 +30,8 @@ public class TaskListResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<TaskBean> getAllTasks() throws SQLException {
-        List<Task> taskList = daoHelper.getList();
         List<TaskBean> taskListBean = new ArrayList<TaskBean>();
+        List<Task> taskList = daoHelper.getList();
 
         for (Task task : taskList) {
             TaskBean taskBean = new TaskBean(task.getId(), task.getTask(), task.getPriority());

@@ -12,30 +12,11 @@ import com.yammer.dropwizard.config.Configuration;
  */
 public class TaskConfiguration extends Configuration {
 
-//    @NotEmpty
-//    @JsonProperty
-//    private String template;
-//
-//    @JsonProperty
-//    private String defaultName;
-//
-//    @NotEmpty
-//    @JsonProperty
-//    private String master;
-//
-//    public String getTemplate() {
-//        return template;
-//    }
-//
-//    public String getDefaultName() {
-//        return "DEFAULT";
-//    }
-
     @NotEmpty
     @JsonProperty
-    private String dbName = "dbName";
+    private String taskView;
 
-    public String getDbName() {
-        return dbName;
+    public String getTaskView() {
+        return taskView;
     }
 }

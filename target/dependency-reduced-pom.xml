@@ -28,7 +28,7 @@
               <transformers>
                 <transformer />
                 <transformer>
-                  <mainClass>com.example.helloworld.service.TaskService</mainClass>
+                  <mainClass>com.example.tasktodo.service.TaskService</mainClass>
                 </transformer>
               </transformers>
             </configuration>
